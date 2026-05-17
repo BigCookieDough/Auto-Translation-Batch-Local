@@ -57,6 +57,9 @@
 #                          (press Enter to use a subfolder called "output"
 #                           inside your input folder)
 #
+#     STEP 6 — Install 1.1.1.1  
+#       You need it so that google translate wont block you IP
+#
 # =============================================================================
 #  INPUT FILE FORMATS
 # =============================================================================
@@ -373,7 +376,7 @@ log = logging.getLogger(__name__)
 # ══════════════════════════════════════════════════════════════════════════════
 
 try:
-    import psutil as _psutil
+    import psutil as _psutil # type: ignore
     _PROC = _psutil.Process()   # represents this running Python process
 
     def ram_mb() -> float:
